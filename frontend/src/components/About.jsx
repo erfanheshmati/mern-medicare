@@ -10,8 +10,8 @@ export default function About() {
                     {/* Image */}
                     <div className="relative w-3/4 lg:w-1/2 x;:w-[770px] z-10 order-2 lg:order-1">
                         <img src={aboutImg} alt="" />
-                        <div className="absolute z-20 bottom-4 w-[200px] md:w-[300px] right-[-30%] md:right-[-7%] lg:right-[22%]">
-                            <img src={aboutCardImg} alt="" />
+                        <div className="absolute z-20 bottom-8 md:bottom-12 w-[200px] md:w-[300px] right-[-30%] md:right-[15%] lg:right-[15%]">
+                            <img src={aboutCardImg} alt="" className="rounded-xl shadow-2xl" />
                         </div>
                     </div>
                     {/* Content */}
