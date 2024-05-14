@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom"
-import logo from "../../assets/images/logo.png"
-import userImg from "../../assets/images/avatar-icon.png"
+import logo from "../assets/images/logo.png"
+import userImg from "../assets/images/avatar-icon.png"
 import { BiMenu } from "react-icons/bi"
 import { useEffect, useRef } from "react"
 
