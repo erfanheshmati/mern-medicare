@@ -30,7 +30,7 @@ export default function Header() {
 
     const handleStickyHeader = () => {
         window.addEventListener("scroll", () => {
-            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
                 headerRef.current.classList.add("sticky__header")
             }
             else {
