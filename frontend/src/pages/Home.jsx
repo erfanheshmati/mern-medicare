@@ -1,5 +1,6 @@
 import About from "../components/About";
 import Doctors from "../components/Doctors";
+import Faq from "../components/Faq";
 import Feature from "../components/Feature";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
@@ -14,6 +15,7 @@ export default function Home() {
             <Services />
             <Feature />
             <Doctors />
+            <Faq />
         </>
     )
 }
