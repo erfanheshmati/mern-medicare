@@ -3,9 +3,9 @@ import Home from "../pages/Home"
 import Services from "../components/Services"
 import Login from "../pages/Login"
 import Signup from "../pages/Signup"
-import Contact from "../pages/Contact"
-import Doctors from "../pages/doctors/Doctors"
-import DoctorDetails from "../pages/doctors/DoctorDetails"
+import Contact from "../components/Contact"
+import Doctors from "../components/Doctors"
+import DoctorDetails from "../components/DoctorDetails"
 
 export default function Router() {
     return (
