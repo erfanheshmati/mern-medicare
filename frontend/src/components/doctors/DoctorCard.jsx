@@ -1,5 +1,5 @@
 import { BsArrowRight } from "react-icons/bs"
-import starIcon from "../assets/images/Star.png"
+import starIcon from "../../assets/images/Star.png"
 import { Link } from "react-router-dom"
 
 export default function DoctorCard({ doctor }) {

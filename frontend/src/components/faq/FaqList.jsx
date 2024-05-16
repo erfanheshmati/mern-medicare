@@ -1,4 +1,4 @@
-import { faqs } from "../assets/data/faqs"
+import { faqs } from "../../assets/data/faqs"
 import FaqItem from "./FaqItem"
 
 export default function FaqList() {

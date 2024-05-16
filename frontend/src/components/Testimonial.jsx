@@ -56,7 +56,7 @@ export default function Testimonial() {
                                                 {testimonial.name}
                                             </h4>
                                             <div className="flex items-center gap-[2px]">
-                                                {testimonial.rate == 5 ? (
+                                                {testimonial.rate === 5 ? (
                                                     <>
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
@@ -64,20 +64,20 @@ export default function Testimonial() {
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                     </>
-                                                ) : testimonial.rate == 4 ? (
+                                                ) : testimonial.rate === 4 ? (
                                                     <>
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                     </>
-                                                ) : testimonial.rate == 3 ? (
+                                                ) : testimonial.rate === 3 ? (
                                                     <>
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                     </>
-                                                ) : testimonial.rate == 2 ? (
+                                                ) : testimonial.rate === 2 ? (
                                                     <>
                                                         <HiStar className="text-yellowColor w-4 h-4" />
                                                         <HiStar className="text-yellowColor w-4 h-4" />
