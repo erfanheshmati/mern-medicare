@@ -6,6 +6,7 @@ import Signup from "../pages/Signup"
 import Contact from "../components/Contact"
 import DoctorDetails from "../components/doctors/DoctorDetails"
 import FindDoctor from "../components/doctors/FindDoctor"
+import PageNotFound from "../components/PageNotFound"
 
 export default function Router() {
     return (
@@ -18,6 +19,7 @@ export default function Router() {
             <Route path="/register" element={<Signup />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="*" element={<PageNotFound />} />
         </Routes>
     )
 }
