@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 
 import authRoute from "./routes/authRoute.js";
 import userRoute from "./routes/userRoute.js";
+import doctorRoute from "./routes/doctorRoute.js";
 
 dotenv.config();
 
@@ -25,9 +26,9 @@ mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URL);
-    console.log("MongoDB database is connected");
+    console.log("MongoDB is connected");
   } catch (error) {
-    console.log("MongoDB database connection is failed");
+    console.log("MongoDB connection is failed");
   }
 };
 
@@ -38,6 +39,7 @@ app.use(cors(corsOptions));
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/doctors", doctorRoute);
 
 app.listen(port, () => {
   connectDB();
