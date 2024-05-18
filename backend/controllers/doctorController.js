@@ -21,7 +21,7 @@ export const updateDoctor = async (req, res) => {
 export const deleteDoctor = async (req, res) => {
   const id = req.params.id;
   try {
-    const deletedDoctor = await Doctor.findByIdAndDelete(id);
+    await Doctor.findByIdAndDelete(id);
     res.status(200).json({
       success: true,
       message: "Doctor deleted successfully",
@@ -34,10 +34,12 @@ export const deleteDoctor = async (req, res) => {
 export const getSingleDoctor = async (req, res) => {
   const id = req.params.id;
   try {
-    const doctor = await Doctor.findById(id).select("-password");
+    const doctor = await Doctor.findById(id)
+      .populate("reviews")
+      .select("-password");
     res.status(200).json({
       success: true,
-      message: "Doctor found",
+      message: "Successful",
       data: doctor,
     });
   } catch (error) {
@@ -64,7 +66,7 @@ export const getAllDoctors = async (req, res) => {
       );
     res.status(200).json({
       success: true,
-      message: "Doctors found",
+      message: "Successful",
       data: doctors,
     });
   } catch (error) {

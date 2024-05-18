@@ -37,7 +37,7 @@ export const getSingleUser = async (req, res) => {
     const user = await User.findById(id).select("-password");
     res.status(200).json({
       success: true,
-      message: "User found",
+      message: "Successful",
       data: user,
     });
   } catch (error) {
@@ -50,7 +50,7 @@ export const getAllUsers = async (req, res) => {
     const users = await User.find({}).select("-password");
     res.status(200).json({
       success: true,
-      message: "Users found",
+      message: "Successful",
       data: users,
     });
   } catch (error) {
