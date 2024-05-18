@@ -80,7 +80,7 @@ export default function Signup() {
                                         name="role"
                                         value={formData.role}
                                         onChange={handleInputChange}
-                                        className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                                        className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none cursor-pointer hover:opacity-70"
                                     >
                                         <option value="">Select</option>
                                         <option value="patient">Patient</option>
@@ -93,7 +93,7 @@ export default function Signup() {
                                         name="gender"
                                         value={formData.gender}
                                         onChange={handleInputChange}
-                                        className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                                        className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none cursor-pointer hover:opacity-70"
                                     >
                                         <option value="">Select</option>
                                         <option value="male">Male</option>
@@ -117,7 +117,7 @@ export default function Signup() {
                                     />
                                     <label
                                         htmlFor="customFile"
-                                        className="absolute top-0 left-0 w-full h-full flex items-center px-4 py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer">
+                                        className="absolute top-0 left-0 w-full h-full flex items-center px-4 py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer hover:opacity-70">
                                         Upload Photo
                                     </label>
                                 </div>
@@ -129,7 +129,9 @@ export default function Signup() {
                             </div>
                             <p className="mt-5 text-textColor text-center">
                                 Already have an account?
-                                <Link to="/login" className="text-primaryColor font-medium ml-1">Login</Link>
+                                <Link to="/login" className="text-primaryColor font-medium ml-1 hover:opacity-70">
+                                    Login
+                                </Link>
                             </p>
                         </form>
                     </div>
