@@ -48,6 +48,17 @@ body {
   }
   .show__menu {
     display: block;
+    animation-name: menu-open;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes menu-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
