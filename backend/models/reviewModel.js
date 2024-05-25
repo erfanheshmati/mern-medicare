@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Doctor from "../models/doctorModel.js";
+import Doctor from "./doctorModel.js";
 
 const reviewSchema = new mongoose.Schema(
   {

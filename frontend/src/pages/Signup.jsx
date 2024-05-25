@@ -24,9 +24,9 @@ export default function Signup() {
         const file = e.target.files[0]
         setAvatarLoading(true)
 
-        const cachedURL = URL.createObjectURL(file)
-        setSelectedFile(cachedURL)
-        setPreviewURL(cachedURL)
+        // const cachedURL = URL.createObjectURL(file)
+        // setSelectedFile(cachedURL)
+        // setPreviewURL(cachedURL)
 
         /* Image Upload */
         try {
@@ -37,8 +37,8 @@ export default function Signup() {
                 body: uploadData,
             });
             const data = await res.json();
-            // setSelectedFile(data.filePath)
-            // setPreviewURL(data.filePath)
+            setSelectedFile(data.filePath)
+            setPreviewURL(data.filePath)
             setFormData({ ...formData, photo: data?.filePath })
             setAvatarLoading(false)
         } catch (error) {
@@ -56,10 +56,10 @@ export default function Signup() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
             })
-            const { message } = await res.json()
-            if (!res.ok) throw new Error(message)
+            const result = await res.json()
+            if (!res.ok) throw new Error(result.message)
             setLoading(false)
-            toast.success(message)
+            toast.success(result.message)
             navigate("/login")
         } catch (error) {
             toast.error(error.message)

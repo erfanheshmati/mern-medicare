@@ -11,7 +11,14 @@ export const uploadAvatar = async (req, res) => {
   )}`;
 
   const __dirname = path.resolve();
-  file.mv(`${__dirname}/public/uploads/${newFileName}`, (err) => {
+  const uploadPath = path.join(
+    __dirname,
+    "..",
+    "frontend",
+    "public",
+    "uploads"
+  );
+  file.mv(`${uploadPath}/${newFileName}`, (err) => {
     if (err) {
       console.error(err);
       return res.status(500).json({ message: err });
@@ -19,6 +26,6 @@ export const uploadAvatar = async (req, res) => {
   });
   res.json({
     fileName: newFileName,
-    filePath: `../../../backend/public/uploads/${newFileName}`,
+    filePath: `uploads/${newFileName}`,
   });
 };
