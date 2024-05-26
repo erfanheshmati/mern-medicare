@@ -79,6 +79,8 @@ export const login = async (req, res) => {
       role,
     });
   } catch (error) {
-    res.status(500).json({ status: false, message: "Login failed" });
+    res
+      .status(500)
+      .json({ status: false, message: "Internal server error, Try again" });
   }
 };
