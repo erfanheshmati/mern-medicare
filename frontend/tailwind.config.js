@@ -1,8 +1,13 @@
+const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
+      height: {
+        "screen-desktop": "calc(100vh - 100px)",
+        "screen-mobile": "calc(100vh - 80px)",
+      },
       colors: {
         primaryColor: "#0067ff",
         yellowColor: "#feb60d",
@@ -16,5 +21,6 @@ export default {
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
